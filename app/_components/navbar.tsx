@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -48,14 +48,14 @@ export default function Navbar() {
             <Link href="/" className="flex items-center">
               <div className="relative h-10 w-32">
                 <div className="flex items-center gap-2">
-                  <div className="rounded-full bg-green-900 p-1">
+                  <div className="rounded-full bg-[#034833] p-1">
                     <img
                       src="/assets/images/logo.svg"
                       alt="Logo"
                       className="w-6 h-6"
                     />
                   </div>
-                  <span className="text-xl font-bold text-green-900">
+                  <span className="text-xl font-bold text-[#034833]">
                     RouteX
                   </span>
                 </div>
@@ -68,7 +68,7 @@ export default function Navbar() {
               <div key={item.name} className="relative group">
                 <Link
                   href={item.href}
-                  className="flex items-center px-2 py-2 text-sm font-medium text-green-900 hover:text-green-600"
+                  className="flex items-center px-2 py-2 text-sm font-medium text-[#034833] hover:text-green-600"
                 >
                   {item.name}
                   {item.hasDropDown && <ChevronDown className="ml-1 h-4 w-4" />}
@@ -80,7 +80,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <Link
               href="/appointment"
-              className="inline-flex items-center justify-center rounded-full bg-green-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+              className="inline-flex items-center justify-center rounded-full bg-[#83CD20] px-5 py-2.5 text-sm font-medium text-white hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
             >
               Get An Appointment <span className="ml-1">→</span>
             </Link>
@@ -89,7 +89,7 @@ export default function Navbar() {
           <div className="flex md:hidden">
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-md p-2 text-green-900 hover:bg-gray-100 hover:text-green-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
+              className="inline-flex items-center justify-center rounded-md p-2 text-[#034833] hover:bg-gray-100 hover:text-green-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <span className="sr-only">Open main menu</span>
@@ -116,7 +116,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/appointment"
-            className="mt-4 block w-full rounded-full bg-green-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-600"
+            className="mt-4 block w-full rounded-full bg-[#83CD20] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-600"
           >
             Get Appointement
           </Link>
